@@ -169,6 +169,7 @@
                             <li><a  id="skilled_btn_1" onclick="click_sidebar(this)" href="#" class="link-dark d-inline-flex text-decoration-none rounded">留学要求</a></li>
                             <li><a  id="skilled_btn_2" onclick="click_sidebar(this)" href="#" class="link-dark d-inline-flex text-decoration-none rounded">留学签证类别</a></li>
                             <li><a  id="skilled_btn_3" onclick="click_sidebar(this)" href="#" class="link-dark d-inline-flex text-decoration-none rounded">签证条款以及审理时间</a></li>
+                            <li><a  id="skilled_btn_4" onclick="click_sidebar(this)" href="#" class="link-dark d-inline-flex text-decoration-none rounded">医疗保险</a></li>
                           </ul>
                         </div>
                       </li>                      
@@ -186,19 +187,7 @@
                         </div>
                       </li>
                       
-                      <li class="border-top my-3"></li>
-                      <li class="mb-1">
-                        <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-                          医疗保险
-                        </button>
-                        <div class="collapse" id="orders-collapse">
-                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                            <li><a id="jtym_btn_1" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">3.1</a></li>
-                            <li><a id="jtym_btn_2" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">3.2</a></li>
-                          </ul>
-                        </div>
-                      </li>
-                      <li class="border-top my-3"></li>
+                      <li class="border-top my-3"></li>                      
                       <li class="mb-1">
                         <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
                           学历资格
@@ -208,9 +197,7 @@
                             <li><a id="tzym_btn_1" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">职业教育与培训学历资格</a></li>
                             <li><a id="tzym_btn_2" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">预科班或过桥课程</a></li>
                             <li><a id="tzym_btn_3" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">英语语言培训课程</a></li>
-                            <li><a id="tzym_btn_4" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">大学学历资格
-
- </a></li>
+                            <li><a id="tzym_btn_4" onclick="click_sidebar(this)"  href="#" class="link-dark d-inline-flex text-decoration-none rounded">大学学历资格</a></li>
                           </ul>
                         </div>
                       </li>
@@ -220,35 +207,45 @@
     </div>
     <script>
         function click_sidebar(obj) {
-			var click_sidebar_id = obj.id;
+			      var click_sidebar_id = obj.id;
             var skilled = document.getElementById('skilled');
             var skilled_1 = document.getElementById('skilled_1');
             var skilled_2 = document.getElementById('skilled_2');
             var skilled_3 = document.getElementById('skilled_3');
+            var skilled_4 = document.getElementById('skilled_4');
             var gzdb = document.getElementById('gzdb');
             var gzdb_1 = document.getElementById('gzdb_1');
             var gzdb_2 = document.getElementById('gzdb_2');
-            var gzdb_3 = document.getElementById('gzdb_3');
-            var jtym = document.getElementById('jtym');
-            var jtym_1 = document.getElementById('jtym_1');
-            var jtym_2 = document.getElementById('jtym_2');
             var tzym = document.getElementById('tzym');
             var tzym_1 = document.getElementById('tzym_1');
             var tzym_2 = document.getElementById('tzym_2');
             var tzym_3 = document.getElementById('tzym_3');
             var tzym_4 = document.getElementById('tzym_4');
+
             if (click_sidebar_id=='skilled_btn_3'){
                 skilled.hidden = false;
                 skilled_1.hidden = true;
                 skilled_2.hidden = true;
                 skilled_3.hidden = false;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
+                tzym.hidden = true;
+                tzym_1.hidden = true;
+                tzym_2.hidden = true;
+                tzym_3.hidden = true;
+                tzym_4.hidden = true;
+            }
+            else if(click_sidebar_id=='skilled_btn_4'){
+                skilled.hidden = false;
+                skilled_1.hidden=true;
+                skilled_2.hidden=true;
+                skilled_3.hidden=true;
+                skilled_4.hidden=false;
+                gzdb.hidden = true;
+                gzdb_1.hidden = true;
+                gzdb_2.hidden = true;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -259,14 +256,11 @@
                 skilled.hidden = false;
                 skilled_1.hidden=true;
                 skilled_2.hidden=false;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -278,14 +272,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = false;
                 gzdb_1.hidden = false;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -297,14 +288,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;   
+                skilled_4.hidden = true;
                 gzdb.hidden = false;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = false;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -316,52 +304,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = false;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = false;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
-                tzym.hidden = true;
-                tzym_1.hidden = true;
-                tzym_2.hidden = true;
-                tzym_3.hidden = true;
-                tzym_4.hidden = true;
-
-            }
-            else if(click_sidebar_id=='jtym_btn_1'){
-                skilled.hidden = true;
-                skilled_1.hidden=true;
-                skilled_2.hidden=true;
-                skilled_3.hidden=true;                
-                gzdb.hidden = true;
-                gzdb_1.hidden = true;
-                gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = false;
-                jtym_1.hidden = false;
-                jtym_2.hidden = true;
-                tzym.hidden = true;
-                tzym_1.hidden = true;
-                tzym_2.hidden = true;
-                tzym_3.hidden = true;
-                tzym_4.hidden = true;
-
-            }
-            else if(click_sidebar_id=='jtym_btn_2'){
-                skilled.hidden = true;
-                skilled_1.hidden=true;
-                skilled_2.hidden=true;
-                skilled_3.hidden=true;                
-                gzdb.hidden = true;
-                gzdb_1.hidden = true;
-                gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = false;
-                jtym_1.hidden = true;
-                jtym_2.hidden = false;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -373,14 +320,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = false;
                 tzym_1.hidden = false;
                 tzym_2.hidden = true;
@@ -392,14 +336,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = false;
                 tzym_1.hidden = true;
                 tzym_2.hidden = false;
@@ -411,14 +352,11 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = false;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
@@ -430,41 +368,32 @@
                 skilled.hidden = true;
                 skilled_1.hidden=true;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = false;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
                 tzym_3.hidden = true;
                 tzym_4.hidden = false;
 
-            }
-            else{
+            } else {
                 skilled.hidden = false;
                 skilled_1.hidden=false;
                 skilled_2.hidden=true;
-                skilled_3.hidden=true;                
+                skilled_3.hidden=true;
+                skilled_4.hidden = true;
                 gzdb.hidden = true;
                 gzdb_1.hidden = true;
                 gzdb_2.hidden = true;
-                gzdb_3.hidden = true;
-                jtym.hidden = true;
-                jtym_1.hidden = true;
-                jtym_2.hidden = true;
                 tzym.hidden = true;
                 tzym_1.hidden = true;
                 tzym_2.hidden = true;
                 tzym_3.hidden = true;
                 tzym_4.hidden = true;
-
             }
-
         }
     </script>
     <!-- 左侧目录栏 -->
@@ -560,7 +489,7 @@
             <p><b>573高等教育类签证</b></p><br/>
             <P>该类签证是为批准国际学生在澳大利亚的大学中进行课程学习，并且在完成学年作业后最终获得学士学位，毕业证书，专业文凭或硕士学位。</P>
             <br/>
-
+ 
             <p><b>574硕士和博士学位类签证</b></p><br/>
             <P>该类签证是为批准国际学生在澳大利亚的大学中进行研究性学习，并且在完成研究项目后最终获得硕士学位或博士学位。</P>
             <br/>
@@ -574,7 +503,7 @@
             <br/>
           </article>
 
-
+          <!-- 1.3 -->
           <!-- 签证条款以及审理时间 -->
           <article id="skilled_3" class="blog-post" hidden="true">
             <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">签证条款以及审理时间</h2>
@@ -623,85 +552,94 @@
             <p>该项签证条款的效果主要体现在，除非出现某些你自己不能控制的特殊情况，你在签证有效期之外不得继续在澳大利亚停留。当然你也可以申请你的资助机构同意的进一步学习签证或者保护性签证</p><br/>
 
           </article>
-          <!-- 1.3 -->
+          <!-- 医疗保险 -->
+          <article id="skilled_4" class="blog-post" hidden="true">
+            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">医疗保险</h2>
+
+            <p>作为临时学生签证的持有者，申请人无权免费使用公共卫生保健系统的医疗保险</p><br/>
+            <P>相反，申请人在境内期间需要获得海外学生医疗保险(OSHC)。这个私人健康保险的费用必须在签证签发之前支付，每年可续费。在大多数情况下，申请人所申请的澳大利亚机构可以代表申请人进行安排医疗保险的购买和注册。</P>
+          </article>
         
         <h3 id="gzdb" class="mb-1 border-bottom" style="margin-top: 1.5vh; padding-bottom: 2vh; font-weight: 900; font-size: 2.5rem; " hidden="true">学历简介</h3>
         <!-- 2.1 -->
           <article id="gzdb_1" class="blog-post"  hidden="true">
             
-            <h2 class=" mb-4" style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">澳大利亚的教育</h2>
+            <h4 class=" mb-4" style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">澳大利亚的教育</h4>
+            <br/>
             <p>澳大利亚教育主要由州政府负责。各州设教育部，主管本州的大学、中学、小学和技术教育学院。联邦政府只负责给澳大利亚的大学和高等教育学院提供经费，制定和协调教育政策。学校分公立、私立两种，实行学龄前教育、中小学12年义务教育和高等教育，重视并广泛推行职业教育。澳大利亚共有39所大学，开设从大学预科、本科、硕士、博士各个级别的学位及文凭课程。它们获得了世界各地的广泛承认，也是中国教育部承认学历的学校。澳大利亚的大学普遍教学质量较高，开设的课程也较广泛，学生可以根据自己的需要选择不同的专业学习。澳大利亚还有大约230所职业技术学院(TAFE)，开设实用的针对就业的2年制大专文凭课程。</p>
           </article>
         <!-- 2.1 -->
         <!-- 2.2 -->
           <article id="gzdb_2" class="blog-post"  hidden="true">
             
-            <h2 class=" mb-4" style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">澳大利亚学历资格框架</h2>
-            <p><p>澳大利亚教育主要由州政府负责。各州设教育部，主管本州的大学、中学、小学和技术教育学院。联邦政府只负责给澳大利亚的大学和高等教育学院提供经费，制定和协调教育政策。学校分公立、私立两种，实行学龄前教育、中小学12年义务教育和高等教育，重视并广泛推行职业教育。澳大利亚共有39所大学，开设从大学预科、本科、硕士、博士各个级别的学位及文凭课程。它们获得了世界各地的广泛承认，也是中国教育部承认学历的学校。澳大利亚的大学普遍教学质量较高，开设的课程也较广泛，学生可以根据自己的需要选择不同的专业学习。澳大利亚还有大约230所职业技术学院(TAFE)，开设实用的针对就业的2年制大专文凭课程。</p></p>
+            <h4 class=" mb-4" style="font-size: 1.5rem; margin-bottom: 1rem; font-weight: 800;">澳大利亚学历资格框架</h4>
+            <br/>
+            <p>澳大利亚目前共有39所大学，其中37所是公立大学，2所是私立大学；从综合排名来看，有8所大学是教研类大学（又称之为八大名校），另外31所是教学类大学。澳大利亚大学的大部分本科专业（如商科、文科、理科和计算机专业等）的学制是3年，少部分本科专业（如工程、法律、教育专业等）的学制是4年，另外，建筑学专业的学制是5年，医学专业的学制一般是6年。除了大学之外，数量众多的职业技术学院(TAFE)也是澳大利亚高等教育体系的一个重要组成部分。</p>
+            <br/>
+            <p>澳大利亚学历资格框架(Australian Qualifications Framework，简称AQF)令澳大利亚的教育系统与众不同。AQF是一种由政府建立的全国性系统，使课程与学历挂钩，涵盖了大学、职业教育与培训以及中小学教育。只要符合签证要求，便可以通过AQF轻易从一个学历资格跳到下一个学历资格，或者从一所学校转到另外一所。让你可以更有弹性地进行就业规划和鼓励你继续学习，帮助你应付职业生涯和生活方式的变化。AQF能提供学历资格的评估和认可准则，如文凭与学位。比方说，你可以为先前经学习、培训、工作和生活经验而学到的知识和技能争取认可资格。一旦你既有的学历资格被确认，便可以在澳大利亚选择适当的课程就读。即使你未能全部完成AQF学历资格审核，也可以获得一份学识陈述书。AQF涵盖十三种由以下教育机构核发的全国性学历资格：中学/职业教育与培训学校/高等教育机构（以大学为主）。</p>
           </article>
           <!-- 2.2 -->
-        <!-- 2.3 -->
-          <article id="gzdb_3" class="blog-post"  hidden="true">
-            
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题2.3</h2>
-            <p>xxxxx</p>
-          </article>
-          <!-- 2.3 -->
-
-
-        <h3 id="jtym" class="mb-1 border-bottom" style="margin-top: 1.5vh; padding-bottom: 2vh; font-weight: 900; font-size: 2.5rem; " hidden="true">
-          大标题3
-        </h3>
+        <h3 id="tzym" class="mb-1 border-bottom" style="margin-top: 1.5vh; padding-bottom: 2vh; font-weight: 900; font-size: 2.5rem; " hidden="true">学历资格</h3>
         <!-- 3.1 -->
-          <article id="jtym_1" class="blog-post"  hidden="true">
-            
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题3.1</h2>
-            <p>xxxxx</p>
-          </article>
-        <!-- 3.1 -->
-        <!-- 3.2 -->
-          <article id="jtym_2" class="blog-post"  hidden="true">
-            
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题3.2</h2>
-            <p>xxxxx</p>
-          </article>
-          <!-- 3.2 -->
-
-        <h3 id="tzym" class="mb-1 border-bottom" style="margin-top: 1.5vh; padding-bottom: 2vh; font-weight: 900; font-size: 2.5rem; " hidden="true">
-        大标题4
-        </h3>
-        <!-- 4.1 -->
           <article id="tzym_1" class="blog-post"  hidden="true">
-            
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题4.1</h2>
-            <p>xxxxx</p>
+            <h4 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">职业教育与培训学历资格</h4>
+            <br/>
+            <p>职业教育与培训院校授予的学历资格可分为一级至四级证书、专科文凭和高级专科文凭。授予有关学历的课程都符合国家行业标准并可帮助学生在许多行业就业或进一步升学。</p><br/>
+            <p><b>一级证书: </b>4至6个月。获得一级证书的学生可完成指定范围内的日常工作。一级证书涉及各种与就业有关的技能，包括就业准备和参与技能、范围广泛的入门技巧，还包括在某些协作环境下所需的具体工作场所技能。</p><br/>
+            <p><b>二级证书：</b>6至8个月。获得二级证书的学生掌握在特定条件下完成工作或者应用所学知识所需的各种技巧。在相应工作条件下学生的工作方式有一定的可选择性。学生必须对其工作承担一定的责任。学生会被委以一些复杂的、非日常的工作，也会与所在团组中的其他人一起合作。</p><br/>
+            <p><b>三级证书：</b>12个月。获得三级证书的学生掌握的知识和技能具有一定广度、深度和难度。学生将能够在全新的环境中选择运用已学过的知识和技能，也能在具有一定复杂性的环境中为解决问题提出技术性的意见和建议，选择正确的工作方法，发挥某种领导作用。学生将能够在一定范围内进行熟练的业务操作，通常包括熟练处理已知的日常事务，熟知其处理方法和程序。学生能在限定的时间内决定选择适当的设备、服务或者采取应急措施。其工作将涉及对他人的工作承担一定的责任，也涉及团队参与和团组协作。</p><br/>
+            <p><b>四级证书：</b>18至24个月。获得四级证书的学生能掌握在多种复杂而非常规的条件下运用已知知识的技巧，通常具有一定的广度、深度和复杂性。学生将能表现出领导能力，引导自己和他人运用技术手段和方法来解决非常规的或者带有偶然性的问题。学生必须在大量的技能运用练习中展示其评价和分析现行工作状况、制定新的标准和程序的能力。除了展示对他人的领导和引导能力以外，学生还必须对他人的工作负责，并表现出一定的组织才能。</p><br/>
+            <p><b>专科文凭：</b>18至24个月，专科文凭课程主要训练学生应用学过的技能和知识提出各种创意，进行深入、广泛、复杂的方案策划以适应广泛的技术和管理要求，做好评估和协调工作。获得专科文凭的学生能够自主应用一定的知识和技能，并在某些领域中达到相当深度，使之可以确定策划方案，选择使用适当的设备、服务、技术。获得专科文凭的学生能够参与战略性创意的研发，并在实施复杂的技术操作或其他人员组织工作中承担个人责任、发挥自主性。他们既可能参与日常工作小组，也能担当策划与评估工作，还有可能参与小组或者团队之间的协调。有些大学也授予某些专科文凭</p><br/>
+            <p><b>高级专科文凭：</b>2至3年。高级专科文凭课程训练学生为履行技术和管理职能而进行深入广泛并具有复杂性的分析、诊断、设计、实施与评估的能力。这包括开发新的标准、应用知识或程序的技能等。学生学习将大量的基本原理或者复杂的技术应用于广泛的未知的环境中以履行复杂或特殊的职能，同时也制定广泛的方案、预算和长期计划。学生将学会在工作中对自己和他人负责。有些大学也颁发一些高级专科文凭。</p><br/>
+            <p><b>职业研究生证书：</b>此项学习需要在原有知识与技能的基础上，对于广博的和／或专门领域内的知识与技能进行自我指导式的开发学习，以期最终成就学业。职业研究生证书具有实质价值的广度、深度和繁复性，在极广博的和／或极专门的领域内，包括了有关技术和／或管理机能方面的启蒙、分析、设计、计划、实施以及评估等。各技能包括要在极广博的和／或极专门的领域内，就多种多样的和／或专门的计划、设计、运行、技术和／或管理机能等方面，做出高水准的、完全独立的、复杂的评断。它需要负全责，以及对他人和／或机能之成果的各个方面，如计划、预算和战略等，做出广泛而全方位的考虑。有些大学也提供某些职业研究生证书。</p>
           </article>
-        <!-- 4.1 -->
-        <!-- 4.2 -->
+        <!-- 3.2 -->
           <article id="tzym_2" class="blog-post"  hidden="true">
-            
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题4.2</h2>
-            <p>xxxxx</p>
+            <h4 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">预科班或过桥课程</h4>
+            <br/>
+            <p>持学生签证到澳大利亚留学的国际学生所修读的课程和培训，大部分涵盖在AQF范围内，但仍然有很多为国际学生而设的政府注册课程并不包括在AQF的范围，这些课程一般称为预科班或过桥课程，它们大多数是为了帮助学生达到进修的入学要求或衔接进修课程，进而获得AQF学历资格而设。</p>
           </article>
-        <!-- 4.2 -->
-        <!-- 4.3 -->
+        <!-- 3.2 -->
           <article id="tzym_3" class="blog-post"  hidden="true">
             
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题4.3</h2>
-            <p>xxxxx</p>
+            <h4 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">英语语言培训课程</h4>
+            <p style="padding: 15px 0">澳大利亚有大量英语语言培训课程，能帮助学生改善英文水平，达到未来的进修要求，或为取得国际认可的英语语言学历资格作准备。</p>
+            <p style="padding: 15px 0"><u>高中毕业证书（中学的最后两年）</u></p>
+            <p style="padding: 15px 0">一些学校还颁发一至四级证书或授予学生相应学分以便将来在继续就读相关专业时可免修部分课程。</p>
+            <p style="padding: 15px 0">中学里的高中课程和职业教育课程可以帮助留学生考上大学、进入职业教育与培训院校或者进入劳动大军。教学与考核的方式多种多样，包括课程教学。多种形式的书面考核、正规考试以及其他方面的考核。考核内容包括学生的技能、理解能力、平时表现、参与课题研究、参加小组讨论和野外活动等都可作为考核的内容。不同的课程考核内容也有所不同。</p>
+            <p style="padding: 15px 0">国际学生可以修读各等级的中小学教育课程，但只有学完必修课后的高中毕业证书才属AQF范畴。有些特选的中学会培养学生达到国际性标准，包括参加IB(International Baccalaureate)考试。</p>
+            <p style="padding: 15px 0">根据发证的州和领地机构的不同，各地的高中毕业证书的名称也有差异。</p>
+            <p style="padding: 15px 0"><u>高中毕业证书：</u></p>
+            <p style="padding: 15px 0">澳大利亚首都直辖区ACT12年级证书(ACT Year 12 Certificate)
+              西澳大利亚州高中毕业证书(WA Certificate of Education)
+              <br>北部地区教育证书(NTCE) (Northern Territory Certificate of Education)
+              <br>昆士兰州高中毕业证书(Senior Certificate)
+              <br>南澳大利亚州高中毕业证书(SACE)(South Australian Certificate of Education)
+              <br>新南威尔士州高中毕业证书(HSC) (Higher Education Certificate)
+              <br>维多利亚州高中毕业证书(VCE) (Victorian Certificate of Education)
+              <br>塔斯马尼亚州高中毕业证书(TCE) (Tasmanian Certificate of Education)</p>
           </article>
           <!-- 4.3 -->
         <!-- 4.4 -->
           <article id="tzym_4" class="blog-post"  hidden="true">
             
-            <h2 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">学生签证小标题4.4</h2>
-            <p>xxxxx</p>
+            <h4 class=" mb-4" style="font-size: 2rem; margin-bottom: 1rem; font-weight: 800;">大学学历资格</h4>
+            <p style="padding: 15px 0">下列学历资格由澳大利亚大学以及经澳大利亚政府注册认可的高等教育机构颁授。</p>
+            <p style="padding: 15px 0"><b>副学士：</b>两年。副学士是两年制学历资格，它是在完成了第12年级或同等程度的学业、或证书III、或证书IV以后而进一步的学历。这种所需时间较短的高等教育学历，是未完成学士学位时的中途出路；或是为进阶到学士程度，以便继续深造和作为专业准备的途径；又或者可以进而取得专业工业技术的高级文凭。</p>
+            <p style="padding: 15px 0"><u>学士学位 (Bachelor Degree) 最少3年/荣誉学士学位 (Bachelor Degree Honours) 4年</u></p>
+            <p style="padding: 15px 0">学士学位是基本的大学学历，并为所有欲从事专业工作者必须具有的基本资格。 有些专业工作会要求额外的职业资格为入行条件。在四年或更长的学士学位课程学习过程中，获得特优成绩者，能取得荣誉学士学位。通常荣誉学士学位要比一般学士学位多读一年。</p>
+            <p style="padding: 15px 0"><u>硕士证书 (Graduate Certificates) 6 个月</u></p>
+            <p style="padding: 15px 0">本硕士证书包括提升个人在大学课程中所获得的技术， 或将职业上的知识和技术提升到专业领域。</p>
+            <p style="padding: 15px 0"><u>硕士文凭 (Graduate Diplomas) 12 个月</u></p>
+            <p style="padding: 15px 0">本硕士证书包括提升个人在大学课程中所获得的技术， 或将职业上的知识和技术提升到专业领域。</p>
+            <p style="padding: 15px 0"><u>硕士学位 (Masters Degree) 1-2 年</u></p>
+            <p style="padding: 15px 0">硕士学位课程包括提升特定的专业或职业技术。本学位可透过做专题研究或上课方式，或两种混合方式取得。学生可透过独立研究的方式，对某一特定领域的知识有深度的了解。</p>
+            <p style="padding: 15px 0">硕士学位通常要在取得学士学位之後，再进修二年，如果您有荣誉学士学位的话，您只要读一年即可。</p>
+            <p style="padding: 15px 0"><u>博士学位 (Doctoral Degree) 一般要 3 年</u></p>
+
+            <p style="padding: 15px 0">博士学位是澳洲的大学所颁授的最高学位。虽然它是以做研究的方式所取得的学位，但是有些博士课程可能要求学生上一些课程。欲获得博士学位，需具备下参考条件：</p>
+            <p style="padding: 15px 0">对一门知识的有关文献，实验或其他的系统化的方法进行透彻的评论。<br>2.提出有独创性的研究专题，导致对一门学科的知识、理解或应用有重大的贡献。<br>3. 提出一个深入的、有水准的论文，证实该项研究与该学科领域架构之关连性。</p>
           </article>
-          <!-- 4.4 -->
-
-
-
-
       <!-- 返回顶部 -->
       <nav class="blog-pagination" aria-label="Pagination">
         <a class="btn  rounded-pill" href="#" style="background-color: #30379c; color: #fff;">回到顶部</a>
